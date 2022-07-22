@@ -1,0 +1,1 @@
+select tb_mahasiswa.mh_nama, tb_matakuliah.mk_kode ,tb_mahasiswa_nilai.nilai as nilai from tb_mahasiswa_nilai join tb_mahasiswa ON tb_mahasiswa.mhs_id = tb_mahasiswa_nilai.mhs_id JOIN tb_matakuliah on tb_matakuliah.mk_id = tb_mahasiswa_nilai.mk_id HAVING  GROUP_CONCAT(tb_matakuliah.mk_id) = 2 and MAX(tb_mahasiswa_nilai.nilai)
